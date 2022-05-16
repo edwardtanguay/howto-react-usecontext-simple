@@ -1,9 +1,13 @@
+import { useContext } from 'react';
+import { AppContext } from '../AppContext';
+
 export const Employees = () => {
-	const companyName = 'eee';
-	return (
-		<>
-			<h2>Employees</h2>
-			<p>These are the employees of {companyName}.</p>
-		</>
-	);
+    const { companyName } = useContext(AppContext);
+
+    return (
+        <>
+            <h2>Employees</h2>
+            <p>These are the employees of {companyName}.</p>
+        </>
+    );
 };
